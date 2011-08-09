@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Colosseum - IFC 3D Interactive Web Viewer</title>
+ 
+    <meta name="author" content="Colosseum - 3D BIM Web Viewer" />
+    <meta name="keywords" content="Colosseum - 3D BIM Web Viewer"
+    />
+ 	<meta name="description" content="Colosseum - 3D BIM Web Viewer"
+	/>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    
+    <!-- [template css] begin -->
+	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/960.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" /> 
+    <!--[if IE]>
+        <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection" />
+    <![endif]-->
+    <!-- [template css] end -->
+    
+    <!-- [favicon] begin -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<!-- [favicon] end -->
+	
+	<!-- Some hacks for the dreaded IE6 ;) -->
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" href="css/ie6.css" type="text/css" media="screen" />
+        <script type="text/javascript">
+            var clear="images/clear.gif";
+        </script>
+        <script type="text/javascript" src="js/unitpngfix.js"></script>
+    <![endif]-->
+    
+	<script type="text/javascript" src="js/mootools-yui-compressed.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script> 
+    <script type="text/javascript" charset="utf-8">jQuery.noConflict();</script>
+    
+    <!-- START FANCYZOOM -->
+    <script type="text/javascript" src="js/fancyzoom.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        document.addEvent('domready', function() {
+          $$("div.photo a").each(function(el) { 
+            new FancyZoom(el, {
+              scaleImg:true,
+              onShow: function(e) {
+                var fancy = this
+                var a = fancy.content_div.getElement('a')
+                if(a && a.getElement('.loading')) {
+                  var loaded = function() {
+                    fancy.loaded = true
+                    fancy.options.width = this.width
+                    fancy.options.height = this.height
+                    a.empty().adopt(this)
+                    FancyZoom.show(e)
+                  }
+                  var image = new Image()
+                  image.onload = loaded
+                  image.src = a.href
+                }
+              },
+              max: 700
+            })
+          })
+        });
+    </script>
+    <!-- END FANCYZOOM -->
+
+    <!-- START SCROLL -->
+	<script src="js/scroll.js" type="text/javascript"></script>
+	<!-- END SCROLL -->
+	
+	<!-- START CUFON -->
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/dustismo_400.font.js"></script>
+	<script type="text/javascript">
+       Cufon.replace('h1,ul#nav,h2,h4', {
+           hover: true,
+           fontFamily: 'dustismo' 
+       });
+    </script>
+	<!-- END CUFON -->
+	
+	<!-- START VALIDATE FORM CONTACT -->
+	<script type="text/javascript" src="js/form-contact-validate.js"></script>
+	<!-- END VALIDATE FORM CONTACT -->
+</head>
+
+<body id="home-page">
+	
+	<!-- START TOP FADE -->
+    <div class="top-bg">&nbsp;</div>
+    <!-- END TOP FADE -->
+    
+    <!-- START BOTTOM FADE -->
+    <div class="bottom-bg">&nbsp;</div>
+    <!-- END BOTTOM FADE -->
+    
+    <!-- START HEADER -->
+    <div class="container_12">
+        
+        <!-- START NAVIGATION SECTION -->
+        <div class="grid_3 alpha">
+        
+            <div class="fixed-column">
+                
+                <!-- START LOGO -->
+                <a href="index.htm" title="home page">
+                    <img src="images/logo.png" alt="logo" class="logo" />
+                </a>
+                <!-- END LOGO -->
+                
+                <!-- START NAV -->
+                <ul id="nav">
+                    <li><a href="#home-page" title="Home page">home</a></li>
+                    <li><a href="#about-page" title="features">about</a></li>
+                    <li><a href="#features-page" title="features">features</a></li>
+                    <li><a href="#portfolio-page" title="portfolio">portfolio</a></li>
+                    <li><a href="#contact-page" title="contatti">contact</a></li>
+                </ul>
+                <!-- END NAV -->
+                
+                
+                
+                <!-- START SEND ME AN EMAIL -->
+                <a href="mailto:colosseum.project@gmail.com" title="Send us an email">
+                    <img src="images/send-mail.gif" alt="send mail" />
+                </a>
+                <!-- END SEND ME AN EMAIL -->
+                
+                
+                <!-- DO NOT REMOVE: START CREDITS -->
+                <div class="credits">
+                    <!--<a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/2.5/it/80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Your Inspiration Folio</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.yourinspirationweb.com" property="cc:attributionName" rel="cc:attributionURL">Your Inspiration Web</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/">Creative Commons Attribuzione 2.5 Italia License</a>.--> powered by
+                    <a href="http://www.yourinspirationweb.com/en/free-website-template-present-your-portfolio-online-in-a-single-webpage/" title="The Community of Inspiration Dedicated to Webdesign">
+                         YIW
+                    </a>
+                </div>
+                <!-- END CREDITS -->
+    
+            </div>
+        
+        </div>
+        <!-- END NAVIGATION SECTION -->
+        
+        <div class="grid_9 omega right-column">
+        
+            <!-- START HOME PAGE -->
+            <div class="home">
+                <!--<img src="images/text-home.jpg" alt="contenuto-home" />-->
+                <h1>
+                    The goal of this project aims to  be ActiveX component like Microsoft Silver Light or server-client application like Autodesk Map guide , Read every model with its attributes (IDs, descriptions, phase…etc), Object selection and browsing, Ability to connect model with databases like oracle or SQL servers through unified IDs ,Adding security layer to prevent/allow users from seeing data. 
+Have good performance/reliability over Internet/intranet.
+                </h1>
+                <!--<img src="images/arrow-home.png" alt="arrow" class="arrow" />-->
+            </div>
+            <div class="home-bottom-bg"></div>
+            <!-- END HOME PAGE -->
+            
+            
+             <a id="about-page"></a>
+            
+            <div class="about">
+                    
+                <div class="grid_5 alpha">
+                
+                    <div class="container-about">
+                        <h2>about</h2>
+                        <p>
+                        This project originally belongs to a group of Computer Science students Suez Canal University who intends to write an academic paper and anyone is welcome 
+to contribute for that project.
+                        </p>
+                        <p>
+						<strong>groups</strong><br/>
+    WebService Team: Ahmed Hamed, Rami Ebeid, Ibrahim Refaat, Marwan Ahmed<br/>
+    Database Team: Ahmed Ghanem, Abdallah Hamza, Mohamed Hany<br/>
+    ActiveX Team: Ahmed Ibrahim, Ahmed Shawky, Emad El-Said
+                        </p>
+                        
+                    </div>
+                </div>
+                
+                <!-- START AVATAR -->
+                <div class="grid_4 omega avatar-image">
+                    <img src="images/avatar.jpg" alt="avatar" class="avatar" />
+                </div>
+                <!-- END AVATAR -->
+                
+                <div class="clear"></div>
+            </div>
+            <div class="about-bottom-bg"></div>
+            <!-- END ABOUT PAGE -->
+            
+            <!-- START FEATURES PAGE -->
+            <a id="features-page"></a>
+            
+            <div class="about">
+                    
+                <div class="grid_5 alpha">
+                
+                    <div class="container-about">
+                        <h2>Features</h2>
+                        <p>
+                        ActiveX control that can be added into any container in the Microsoft Windows platform.
+                        </p>
+                        <p>
+						Uses the famous WCF web service to provide a middleware layer.
+                        </p>
+                        <p>
+						Uses SOAP for reliability and security of data exchange.
+                        </p>
+                        <p>
+						High performance in rendering and retrieving the model.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- START AVATAR -->
+                <div class="grid_4 omega avatar-image">
+                    <img src="images/avatar.jpg" alt="avatar" class="avatar" />
+                </div>
+                <!-- END AVATAR -->
+                
+                <div class="clear"></div>
+            </div>
+            <div class="about-bottom-bg"></div>
+            <!-- END FEATURES PAGE -->
+            
+            <!-- START PORTFOLIO PAGE -->
+            <a id="portfolio-page"></a>
+            
+            <div class="portfolio">
+            	<div class="grid_4 alpha">
+	                <div class="container-portfolio">
+	                    <h2>Portfolio</h2>
+                    </div>
+                </div>
+                
+                <!-- START PORTFOLIO QUOTE -->
+                <div class="grid_4 omega">
+                	<div class="portfolio-quote">
+                		<h4>Please Contact us for more information</h4>
+                	</div>
+                </div>
+                <!-- END PORTFOLIO QUOTE -->
+                
+                <div class="clear"></div>
+                
+                <div class="container-portfolio">
+                    
+                    <!-- START THUMB IMAGE -->
+                    <div class="photo">
+                        <a href="#project01">
+                            <img src="images/portfolio/Inner View.JPG" alt="Inner View" width="150" height="150" />
+                        </a>
+                    </div>
+                    
+                    <div class="photo">
+                        <a href="#project02">
+                            <img src="images/portfolio/Outer View.JPG" alt="Outer View" width="150" height="150"/>
+                        </a>
+                    </div>
+                    
+                    <div class="photo">
+                        <a href="#project03">
+                            <img src="images/portfolio/While Loading.JPG" alt="While Loading" width="150" height="150"/>
+                        </a>
+                    </div>
+                    
+                    <div class="clear"></div>
+                    <!-- END SMALL IMAGE -->
+                    
+                    <!-- START BIG IMAGE -->
+                    <div id="project01">
+                        <a href="images/portfolio/Inner View.JPG#project01">
+                            <img src="images/fancyzoom/loading.gif" alt="loading" class="loading" />
+                        </a>
+                        <p class="foto_caption">Inner View</p>
+                    </div>
+                    
+                    <div id="project02">
+                        <a href="images/portfolio/Outer View.JPG#project02">
+                            <img src="images/fancyzoom/loading.gif" alt="loading" class="loading" />
+                        </a>
+                        <p class="foto_caption">Outer View</p>
+                    </div>
+                    
+                    <div id="project03">
+                        <a href="images/portfolio/While Loading.JPG#project03">
+                            <img src="images/fancyzoom/loading.gif" alt="loading" class="loading" />
+                        </a>
+                        <p class="foto_caption">While Loading</p>
+                    </div>
+                    
+                    <!-- END BIG IMAGE -->
+
+                </div>
+            </div>
+            <div class="portfolio-bottom-bg"></div>
+            <!-- END PORTFOLIO PAGE -->
+            
+            <!-- START CONTACT PAGE -->
+            <a id="contact-page"></a>
+            
+            <div class="contact">
+            
+                <div class="grid_5 alpha">
+                    
+                    <div class="container-contact">
+                        <h2>Contact</h2>
+                        
+                        <div id="log"></div>
+                        <p class="title">questions, information?</p>
+                    
+                    <p>
+                        Do Not hesitate to contact us.<br/>
+                         Send and Email
+                    </p>
+                    </div>
+                </div>
+                
+                <div class="grid_4 omega contact-info">
+                    
+                    
+                    <img src="images/logo.small.gif" alt="logo" class="contact-logo" />
+                    
+                    <h3>Colosseum Team</h3>
+                    
+                    <address>Computer Science department,Faculty of computer and informatics, Suez Canal University, Egypt</address>
+                    
+                    <p class="right">
+                        <span>Email.</span>colosseum.project@gmail.com<br/>
+                    </p>
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+            
+            <div class="contact-bottom-bg"></div>
+            <!-- END CONTACT PAGE -->
+            
+        </div>
+        
+        <div class="clear"></div>
+    </div>
+    
+	<!--[if IE]>
+      <script type="text/javascript"> Cufon.now(); </script>
+    <![endif]-->  
+</body>
+</html>
